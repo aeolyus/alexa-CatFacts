@@ -2,10 +2,10 @@
 var Alexa = require('alexa-sdk');
 
 var APP_ID = "amzn1.ask.skill.b4566e63-7745-4a8f-a742-0e005dc4b67b"; //OPTIONAL: replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
-var SKILL_NAME = 'Dog Facts';
+var SKILL_NAME = 'Cat Facts';
 
 /**
- * Array containing dog facts.
+ * Array containing cat facts.
  */
 var FACTS = [
     "Cats are the most popular pet in the United States.",
@@ -39,7 +39,7 @@ var handlers = {
         this.emit('GetFact');
     },
     'GetFact': function () {
-        // Get a random dog fact from the dog facts list
+        // Get a random cat fact from the cat facts list
         var factIndex = Math.floor(Math.random() * FACTS.length);
         var randomFact = FACTS[factIndex];
 
@@ -49,7 +49,7 @@ var handlers = {
         this.emit(':tellWithCard', speechOutput, SKILL_NAME, randomFact)
     },
     'AMAZON.HelpIntent': function () {
-        var speechOutput = "You can say tell me a dog fact, or, you can say exit... What can I help you with?";
+        var speechOutput = "You can say tell me a cat fact, or, you can say exit... What can I help you with?";
         var reprompt = "What can I help you with?";
         this.emit(':ask', speechOutput, reprompt);
     },
