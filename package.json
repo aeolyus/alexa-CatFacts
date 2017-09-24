@@ -1,7 +1,7 @@
 {
-  "name": "dogfacts",
+  "name": "catfacts",
   "version": "0.0.1",
-  "description": "A simple Alexa skill running as an AWS Lambda function that gives random dog facts",
+  "description": "A simple Alexa skill running as an AWS Lambda function that gives random cat facts",
   "main": "index.js",
   "dependencies": {
     "alexa-sdk": "^1.0.3"
